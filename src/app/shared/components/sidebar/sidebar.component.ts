@@ -14,4 +14,8 @@ export class SidebarComponent {
   public get tags(): string[] {
     return this.gifsService.tagsHistory
   }
+
+  async searchTag(tag: string): Promise<void> {
+    await this.gifsService.searchTag(tag)
+  }
 }
